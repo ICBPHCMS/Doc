@@ -1,0 +1,154 @@
+%\documentclass[12pt,tightenlines,superscriptaddress]{revtex4}
+%\documentclass[12pt,tightenlines,superscriptaddress]{revtex4-1}
+%\pdfoutput=1
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{jheppub} % for details on the use of the package, please
+                     % see the JHEP-author-manual
+
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{slashed}
+\usepackage[toc,page]{appendix}
+\usepackage{breakurl}
+%\usepackage{german}
+\usepackage{lineno}
+
+
+
+%%%%%%% COMMAND DEFINITIONS %%%%%%%
+
+% comments/emphasis in draft
+\def\draftnote#1{{\bf #1}}
+\def\gdraftnote#1{{\bf\it #1}}
+\newcommand{\comments}[1]{} 
+
+\newcommand{\KSm}{B^0\rightarrow K^* \mu^+\mu^-}
+\newcommand{\KSe}{B^0\rightarrow K^* e^+e^-}
+\newcommand{\Km}{B^{\pm}\rightarrow K^{\pm} \mu^+\mu^-}
+\newcommand{\Ke}{B^{\pm}\rightarrow K^{\pm} e^+e^-}
+
+\newcommand{\bra}[1]{\langle #1|}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\MET}{\slashed{E}_T}
+\newcommand{\mDM}{m_{\rm{DM}}}
+\newcommand{\mMed}{M_{\rm{med}}}
+\newcommand{\gDM}{g_{\rm{DM}}}
+\newcommand{\gq}{g_q}
+\newcommand{\ifb}{\rm{fb}^{-1}}
+%not kerned!
+\newcommand{\GeV}{\rm{GeV}}
+
+\linenumbers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Proposal for the contribution of Imperial CMS Group to the CMS B Parking Effort in 2018} 
+%{\bf White Paper of the May 6th, 2016 Brainstorming Workshop}
+
+\author[1]{Robert~Bainbridge,}
+\author[1]{Oliver~Buchmueller,}
+\author[1]{Vincencio~Cacchio,}
+\author[1]{Sarah~Malik,}
+\author[1]{and Thomas~Strebler}
+\affiliation[1]{High Energy Physics Group, Blackett Laboratory, Imperial College, Prince Consort Road, London, SW7 2AZ, United Kingdom}
+
+
+
+
+
+
+\vspace{0.5em}
+\abstract{In this working document we outline a proposal to contribute to the 'B parking' effort of CMS, which intends to collect in 2018 a data set of  $O(10^{10})$ B decays. This impressive data set could enable the analysis of $B^{\pm(0)} \rightarrow  K^{(*)} \ell\ell$ decays in order to perform a significant and competitive measurement of both $R_K$ and $R_{K^{*}}$. }
+\begin{document}
+\maketitle
+\flushbottom
+
+
+
+%\pagestyle{plain}
+
+
+\section{Introduction}
+In this working document we outline a proposal for contributions to the CMS B parking project in 2018.
+Besides the ongoing contribution to improve the low momentum electron reconstruction, which is key to the success of a competitive measurement of $R_K$ and $R_{K^{*}}$, the Imperial CMS group also plans to take a leading role in the analysis to measure the ratio $R_{K} (q^2 = m_{\ell\ell}^2)= \Gamma (B^{\pm} \rightarrow K^{\pm} \mu \mu )/\Gamma (B^{\pm} \rightarrow K^{\pm}  e e)$, which originates from charged B decays. In section~\ref{analysis} we outline a high-level step-by-step procedure that eventually leads to the measurement of $R_{K}$, while in section~\ref{electron} we sketch a programme of contributions to the low-momentum electron reconstruction effort. 
+
+
+\section{Step-by-Step Analysis Procedure}\label{analysis}
+
+In order to arrive at a fully commissioned analysis to measure $R_{K}$, it is important to perform some auxiliary and cross check measurements along the way. The sequence of these measurements is mainly determined by the availability of a sufficiently large data set of the relevant B decays. Table~\ref{tab:yields} shows expected yields for different timelines of partially or fully reconstructable B decays that are relevant for the commissioning of the analysis. In the following sections~\ref{bpurity} and~\ref{jpsi} we outline different milestones of the analysis that eventually lead to final measurement of the unitarity ratios. In~\ref{mc} we outline the need for dedicated Monte Carlo production to serve as input for the different analysis steps and in~\ref{summary} we summarise the analysis milestones.      
+
+
+\begin{table}[htb]
+\footnotesize\center
+\caption{\it Expected yields of different partially or fully reconstructable B decays.  'N (2018) parked' represents the number of events recorded and parked in the entire run year 2018, while 'N(2018) processed' stands for the number of events that will be processed during the run year (about 5\% of all parked events) and are available for immediate analysis. 'N ($10^8 $ trigger)' identifies the number of decays that are contained in a sample of $10^8$ triggers, which represents about one average fill. Here we assume a  typical $B$ hadron purity of about 80\% for single-muon trigger after HLT refinement.  \label{tab:yields}}
+\vspace{0.1in}
+\begin{tabular}{ |c|c|c|c|c| }
+  \hline
+Mode &  N (2018) parked & N(2018) processed & N ($10^8 $ triggers) & ${\cal BR}$  \\ \hline \hline
+
+\multicolumn{5}{|c|}{ Partially reconstructable $B \rightarrow D^{*+} l^- \nu$  decay mode}\\ \hline
+$B^0\rightarrow D^{*+} l^- \nu  \rightarrow D^0 \pi^+  l^- \nu$ & \multicolumn{3}{|c|}{} &  \\ 
+$\rightarrow K^- \pi^+ \pi^+ l^- \nu$ &   $5.5\times10^6$ &   $2.8\times10^5$  & $3.5\times10^4$  & $  1.1\times10^{-3}$   \\ \hline \hline
+
+\multicolumn{5}{|c|}{ Full reconstructable $B \rightarrow D \pi$  decay mode}\\ \hline
+$B^0\rightarrow D^+ \pi^-  \rightarrow K^-  \pi^+  \pi^+ \pi^-$ &  $1.25\times10^6$   &  $6\times10^4$     & $8.0\times10^3$  & $ 2.5 \times 10^{-4}$   \\ \hline
+$B^{\pm} \rightarrow D^0 \pi^{\pm} \rightarrow K^{\mp}  \pi^{\pm} \pi^{\pm}$ &   $4.8\times10^4$ &  $2.4\times10^3$& $6.1\times 10^{3}$   & $1.9\times 10^{-4}$  \\ \hline \hline
+
+\multicolumn{5}{|c|}{ Main background sample $B \rightarrow K^{(*)} J/\psi $  decay mode}\\ \hline
+$B^0\rightarrow K^*J/\psi  \rightarrow K^+ \pi^- \ell^+\ell^-$ &   $2.6\times10^5$ &   $1.3\times10^4$  & $1.7 \times 10^{3}$  & $ 5.24 \times 10^{-5}$   \\ \hline
+$B^{\pm}\rightarrow K^{\pm} J/\psi \rightarrow  K^{\pm} \ell^+\ell^-$ &   $3.1\times10^5$&   $1.6\times10^4$ & $2.0\times 10^{3}$ & $6.12\times 10^{-5}$   \\ \hline \hline
+
+\multicolumn{5}{|c|}{Signal sample $B \rightarrow K^{(*)}   \ell^+\ell^-$ non resonante decay mode}\\ \hline
+$B^0\rightarrow K^+ \pi^- \ell^+\ell^-$ &   3290 &   165  & 21  & $6.6 \times 10^{-7}$  \\ \hline
+$B^{\pm}\rightarrow K^{\pm} \ell^+\ell^-$ &   2250 &  113  & 15  & $4.51\times 10^{-7}$  \\ \hline
+
+
+  \end{tabular}
+\end{table}
+
+\subsection{Measurement of B purity in data}\label{sub:bpurity}\label{bpurity} 
+A direct measurement of the B purity of our parked data stream is essential to ensure that the data that are written to tape possess a sufficiently large component of B events. In order to perform this measurement directly in data, we propose to collected a sample of about $10^8 $ triggers during a dedicated fill. This fill will taken during the early physics phase of the 2018 run campaign and it is important is that the data are immediately being processed to ensure that they can be used to measure the B purity and to aid the analysis commissioning. This has now been agreed on with management and we expect these data to become available in late May or early June.   
+
+With about  $4.4\times10^4$ $D^{*+} l^-$ and several times $10^3$ $D \pi$ decays a precise measurement of the B purity, both in partially reconstructed as well as fully reconstructed decays, should be straightforward. This precise measurement would also serve as reference for the data quality monitoring in the course of the run year. 
+
+
+\subsection{Analysis commissioning with $B^0\rightarrow J/\psi(l^+l^-) K^{\pm} \pi^{\mp}$ and $B^{\pm} \rightarrow J/\psi(l^+l^-)  K^{\pm}$ events} \label{jpsi} 
+Using control samples that exhibit the same decay topologies like our signal samples but have significantly larger branching fractions would allow us to establish the full analysis strategy in the course of 2018 data taking by using data from normal processing. The most natural control samples would be $B^0\rightarrow J/\psi(l^+l^-) K^{\pm} \pi^{\mp}$ and $B^{\pm} \rightarrow J/\psi(l^+l^-)  K^{\pm}$, which correspond to a branching faction that is about 100 times larger than that of the non-resonant signal events $B^0\rightarrow K^* \ell^+\ell^-$  and $B^{\pm}\rightarrow K^{\pm} \ell^+\ell^-$.
+The processing of one average fill will yield about $10^8 $ triggers and, as show in table~\ref{tab:yields}, it would also contain about 2000 events of $B^0\rightarrow J/\psi(l^+l^-) K^{\pm} \pi^{\mp}$ and $B^{\pm} \rightarrow J/\psi(l^+l^-)  K^{\pm}$. This is about the same number of events that we expected to collect in the entire run year for our signal events. Therefore, this data sample would not only serve a precise determination of the B purity but would also enable us to start commissioning the analysis using its natural control samples (i.e. the $J/\psi(l^+l^-)$ decay mode). 
+Furthermore, it was agreed with management that about every month we will get access to fully processed fill, which in the course of the run year will represent about 5\% of the entire parked data sample. As outlined in table~\ref{tab:yields}, by the end of the run year we should have access to about a few times $10^4$ $B^0\rightarrow J/\psi(l^+l^-) K^{\pm} \pi^{\mp}$ and $B^{\pm} \rightarrow J/\psi(l^+l^-)  K^{\pm}$ events, which will be sufficient to fully commission the analysis and demonstrate that we are able to measure   $R_{K^{(*)}} (q^2 = m_{J/\psi}^2) =1$ as expected. It should be note that at $q^2 = m_{J/\psi}^2$ no New Physics contribution are expected and, thus, showing its consistency with unity is a critical test of the analysis chain.  
+
+\subsection{Dedicated Monte Carlo Production for Relevant B Decays}\label{mc}
+{\bf for Thomas to fill the high-level programme and possibly even add an appendix with some instructions, if possible} 
+
+\subsection{Summary of Analysis Milestones}\label{summary}
+Based on the discussion in the previous sections, the analysis contribution of the Imperial CMS group will focus on charged B decays with the final goal to lead the measurement of  $R_{K} (q^2 = m_{\ell\ell}^2)= \Gamma (B^{\pm} \rightarrow K^{\pm} \mu \mu )/\Gamma (B^{\pm} \rightarrow K^{\pm}  e e)$. The following analysis milestones will be important to meet in order to deliver a timely and competitive measurement of this important lepton universality ratio. 
+
+\begin{itemize} 
+\item Using the data of the first processed fill, we are planning to measure the B purity using fully reconstructed $B^{\pm} \rightarrow D^0 \pi^{\pm} \rightarrow K^{\mp}  \pi^{\pm} \pi^{\pm}$ decays. This final state is not only ideally suited for this task but, with a final state very similar to the signal sample (i.e.  $K^{\mp}  \pi^{\pm} \pi^{\pm}$ vs. $K^{\pm}  l^{\pm} l^{\mp}$) this decay also represents and excellent test ground to establish the basics of the final analysis chain. The time scale for this is {\bf Summer of 2018}. 
+
+\item  Using about 5\% of the parked data that are planned to be directly processed during the course of the run year, we are planning to fully commission the analysis chain and to demonstrate that using $B^{\pm} \rightarrow J/\psi(l^+l^-)  K^{\pm}$ decays the $R_{K} (q^2 = m_{J/\psi}^2) =1$. This will be the last step in the analysis commissioning chain, which, if successful, will trigger the timely processing of the full parked data set. The time scale for this is {\bf End of 2018}. 
+
+\item Assuming that the previous milestones are met successfully, we will proceed to measure $R_{K} (q^2 = m_{\ell\ell}^2)= \Gamma (B^{\pm} \rightarrow K^{\pm} \mu \mu )/\Gamma (B^{\pm} \rightarrow K^{\pm}  e e)$.   The time scale for this is {\bf Spring of 2019}.
+
+\end{itemize}
+
+It should be noted, that at any give milestone it might turn out that a competitive measurement of $R_{K}$ is impossible and, thus, this would be a natural point to revisit the priorities and usefulness of the Imperial contribution to B parking effort.   
+
+
+\section{Low-Momentum Electron Reconstruction}\label{electron}
+{\bf for Rob to fill in a high-level programme/approach for our intended contributions} 
+
+\section{Summary}
+In this working document we have outlined a high-level contributions to the B parking effort in CMS, that focus on the low-momentum electron reconstruction as well as the measurement of lepton universality ratio $R_{K} (q^2 = m_{\ell\ell}^2)= \Gamma (B^{\pm} \rightarrow K^{\pm} \mu \mu )/\Gamma (B^{\pm} \rightarrow K^{\pm}  e e)$. For the analysis effort we have defined critical milestones towards a timely and competitive measurement of this important quantity. As this is a high-risk-high-gain project, it is possible that at any of these milestones it turns out that a competitive measurement is impossible, which in turn would imply that we revisit our priorities and general involvement in this project.   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliography{note.bib}
+\bibliographystyle{JHEP}
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
