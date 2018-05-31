@@ -1,0 +1,34 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Atwood:1996ci}
+D.~Atwood, I.~Dunietz, A.~Soni, Phys. Rev. Lett. \textbf{78}, 3257 (1997),
+  \eprint{hep-ph/9612433}
+
+\bibitem{Aaij:2012kz}
+R.~Aaij, et~al. (LHCb), Phys. Lett. \textbf{B712}, 203 (2012), [Erratum: Phys.
+  Lett.B713,351(2012)], \eprint{1203.3662}
+
+\bibitem{Aaltonen:2011uu}
+T.~Aaltonen, et~al. (CDF), Phys. Rev. \textbf{D84}, 091504 (2011),
+  \eprint{1108.5765}
+
+\bibitem{Saigo:2004de}
+M.~Saigo, et~al. (Belle), Phys. Rev. Lett. \textbf{94}, 091601 (2005),
+  \eprint{hep-ex/0412025}
+
+\bibitem{scoutingW}
+ \eprint{https://indico.cern.ch/event/688591/contributions/2826324/attachments/1580667/2501056/computing_exo_workshop_jan_2018.pdf}
+
+\bibitem{FB}
+ \eprint{http://www.slac.stanford.edu/xorg/hfag/osc/summer_2017/}
+
+\bibitem{PDG0}
+ \eprint{http://pdg.lbl.gov/2017/listings/rpp2017-list-B-zero.pdf}
+
+\bibitem{PDG+}
+ \eprint{http://pdg.lbl.gov/2017/listings/rpp2017-list-B-plus-minus.pdf}
+
+\end{thebibliography}
